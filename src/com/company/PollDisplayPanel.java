@@ -13,10 +13,10 @@ public class PollDisplayPanel extends JPanel
   private String name1, name2, name3;
   // Declare the int fields count1, count2, count3:
 
-  public PollDisplayPanel(int a, double b, String s)
+  public PollDisplayPanel(int a, double b, String s);
 
   // Constructor
-  public PollDisplayPanel(String nm1, String nm2, String nm3)
+  public PollDisplayPanel(String nm1, String nm2, String nm3);
 
   private int count1, count2, count3;
   {
@@ -24,41 +24,41 @@ public class PollDisplayPanel extends JPanel
     name1 = "Tami";
     name2 = "Brian";
     name3 = "Liz";
-    count1 = ("Vote for Tami");   // optional
-    count2 = ("Vote for Brian");   // optional
-    count3 = ("Vote for Liz");   // optional
+    count1 = 0;   // optional
+    count2 = 0;   // optional
+    count3 = 0;   // optional
   }
 
   // Increments count1
   public void vote1()
   {
 
-    count1 = count1 + 1
+    count1 = count1 + 1;
   }
 
   // Increments count2
   public void vote2()
   {
 
-    count2 = count2 + 1
+    count2 = count2 + 1;
   }
 
   // Increments count3
   public void vote3()
   {
 
-    count3 = count3 + 1
+    count3 = count3 + 1;
   }
 
   // Returns a string representation of this object
-  public String toString()
-  {
-    //return   //_______________________________ +
+  public String toString() {
+    return name1 + count1 +
 
-       // ____________________________________ +
+            name2 + count2 +
 
-       // ________________________________ ;
+    name3 + count3 ;
   }
+
 
   // Redefines JPanel's paintComponent to draw this pie chart
   public void paintComponent(Graphics g)
@@ -96,7 +96,7 @@ public class PollDisplayPanel extends JPanel
       degrees = countToDegrees(count1, total);
       drawSector(g, x, y, r, fromDegree, degrees);
 
-      return 0
+      return 0;
 
     }
     else
@@ -113,11 +113,11 @@ public class PollDisplayPanel extends JPanel
     y += (r + 20);
     g.setColor(Color.BLACK);
 
-    g.drawString( , x - r, y);
+    g.drawString( //, x - r, y);
 
-    g.drawString(  , x, y);
+    g.drawString( //  , x, y);
 
-    g.drawString( _______________ , x + r, y);
+    g.drawString( //_______________ , x + r, y);
 
 
     // Display the color squares:
@@ -152,7 +152,7 @@ public class PollDisplayPanel extends JPanel
   public static void main (String []args)
   {
     PollDisplayPanel votingMachine =
-                   new PollDisplayPanel("Tami", "Brian", "Liz");
+                   new PollDisplayPanel(" Tami ", " Brian ", " Liz ");
     votingMachine.vote1 ();
     votingMachine.vote2 ();
     votingMachine.vote2 ();

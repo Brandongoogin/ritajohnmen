@@ -1,12 +1,11 @@
 package com.company;
 
-import static java.util.Collections.swap;
-
 public class MathEx {
-    public static void main(String [] args) {
-        int a;
-        int a = 234;
-        return swap(a);
+
+    public static int swap(int x){
+        int y = x % 10;
+        int a = x % 100;
+        int b =
 
     }
 }

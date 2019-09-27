@@ -13,6 +13,14 @@ public class MathEx {
     public static void main(String[] args) {
         int z = swap(123);
         System.out.print(z);
-    }
+       timeLeft(1, 15, 4, 36);
+        }
+     private static int timeLeft(int curHour, int curMin, int depHour, int depMin){
+        int d = depHour - curHour;
+        int e = depMin - curMin;
+        System.out.print(d + "hours");
+        System.out.println(e + "minutes");
+
+     }
     
 }
